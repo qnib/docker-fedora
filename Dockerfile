@@ -6,7 +6,7 @@ MAINTAINER "Christian Kniep <christian@qnib.org>"
 RUN ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
 
 ADD etc/yum.conf /etc/yum.conf
-RUN dnf install -y python-dnf-plugins-extras-migrate && dnf-2 migrate
-
-RUN dnf update -y -x systemd -x systemd-libs -x iputils
-RUN dnf install -y wget 
+RUN dnf install -y python-dnf-plugins-extras-migrate && dnf-2 migrate && \
+    echo "2015-03-24"; dnf clean all && \
+    dnf update -y -x systemd -x systemd-libs -x iputils && \
+    dnf install -y wget vim curl
