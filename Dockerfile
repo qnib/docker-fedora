@@ -9,4 +9,4 @@ ADD etc/yum.conf /etc/yum.conf
 RUN dnf install -y python-dnf-plugins-extras-migrate && dnf-2 migrate && \
     echo "2015-03-24"; dnf clean all && \
     dnf update -y -x systemd -x systemd-libs -x iputils && \
-    dnf install -y wget vim curl
+    dnf install -y wget vim curl hostname iproute
