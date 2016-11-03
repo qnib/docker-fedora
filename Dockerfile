@@ -1,5 +1,5 @@
 ###### Updated version of fedora (24)
-FROM fedora:24
+FROM fedora:23
 MAINTAINER "Christian Kniep <christian@qnib.org>"
 
 # Solution for 'ping: icmp open socket: Operation not permitted'
