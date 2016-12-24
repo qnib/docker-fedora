@@ -1,5 +1,5 @@
 ###### Updated version of fedora (24)
-FROM fedora:25
+FROM fedora:24
 MAINTAINER "Christian Kniep <christian@qnib.org>"
 
 RUN ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
