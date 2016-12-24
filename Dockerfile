@@ -1,9 +1,8 @@
 ###### Updated version of fedora (24)
-FROM fedora:24
+FROM fedora:25
 MAINTAINER "Christian Kniep <christian@qnib.org>"
 
-# Solution for 'ping: icmp open socket: Operation not permitted'
-RUN ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
+RUN ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
 ADD etc/yum.conf /etc/yum.conf
 RUN dnf install -y python-dnf-plugins-extras-migrate \
